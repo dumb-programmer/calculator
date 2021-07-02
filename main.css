@@ -9,8 +9,15 @@
 .screen {
     height: 50px;
     width: 301px;
+    text-align: right;
     background-color: #eee;
     margin-bottom: 20px;
+}
+
+.input{
+    position: relative;
+    top: 20px;
+    right: 20px;
 }
 
 button {
