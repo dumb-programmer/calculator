@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.screen {
+    height: 50px;
+    width: 301px;
+    background-color: #eee;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 13px;
+    width: 70px;
+    height: 40px;
+    margin-bottom: 5px;
+}
