@@ -41,10 +41,7 @@ function populateDisplay() {
     let display = document.querySelector(".input")
     btns.forEach((btn) => {
         btn.addEventListener('click', () => {
-            display.textContent = btn.textContent
-            if(num1 != null) num2 = parseInt(display.textContent);
-            else num1 = parseInt(display.textContent);
-            console.log(display.textContent)
+            display.textContent += btn.textContent
             return display.textContent
         })
     })
@@ -54,6 +51,9 @@ function getOperator() {
     let operators = document.querySelectorAll(".operator-btn")
     operators.forEach(operator => {
         operator.addEventListener('click', () => {
+            num1 = getDisplay()
+            console.log(num1)
+            clear()
             console.log(operator.textContent)
             op = operator.textContent;
             return operator.textContent;
@@ -65,9 +65,11 @@ populateDisplay()
 getOperator()
 
 equals.addEventListener('click', () => {
-    console.log(operate(op,num1,num2))
-    let result = operate(op,num1,num2)
-    if(result != - 1){
+    num2 = getDisplay()
+    console.log(num2)
+    console.log(operate(op, num1, num2))
+    let result = operate(op, num1, num2)
+    if (result != - 1) {
         setDisplay(result)
         num1 = result
     }
@@ -81,12 +83,17 @@ acBtn.addEventListener('click', () => {
     op = null
 })
 
-function setDisplay(value){
+function setDisplay(value) {
     let display = document.querySelector(".input")
     display.textContent = value
 }
 
-function clear(){
+function getDisplay() {
+    let display = document.querySelector(".input")
+    return +display.textContent
+}
+
+function clear() {
     let display = document.querySelector(".input")
     display.textContent = ""
 }
