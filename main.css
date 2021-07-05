@@ -35,18 +35,19 @@ button {
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 5%;
 }
 
 #clear {
     background-color: red;
     color: white;
     border-radius: 20%;
-    border: 2px solid white;
+    border: 2px solid grey;
     position: relative;
     left: 225px;
 }
 
 #equals {
     background-color: #4285f4;
-    border: 2px solid white;
+    border: 2px solid grey;
 }
