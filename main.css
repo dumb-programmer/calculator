@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
 }
 
 .screen {
@@ -28,11 +28,22 @@ button {
     font-size: 15px;
 }
 
+.body{
+  position: absolute;
+  background-color: grey;
+  padding: 20px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
 #clear {
     background-color: red;
     color: white;
     border-radius: 20%;
     border: 2px solid white;
+    position: relative;
+    left: 225px;
 }
 
 #equals {
