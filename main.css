@@ -48,4 +48,6 @@ button {
 #equals {
     background-color: #4285f4;
     border: 2px solid grey;
+    border-radius: 15%;
+
 }
