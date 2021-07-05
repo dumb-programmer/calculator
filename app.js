@@ -11,9 +11,11 @@ function multiply(x, y) {
 }
 
 function divide(x, y) {
+    if (y === 0) {
+        return -1;
+    }
     return x / y;
 }
-
 
 function operate(operator, operand1, operand2) {
     switch (operator) {
@@ -52,9 +54,7 @@ function getOperator() {
     operators.forEach(operator => {
         operator.addEventListener('click', () => {
             num1 = getDisplay()
-            console.log(num1)
             clear()
-            console.log(operator.textContent)
             op = operator.textContent;
             return operator.textContent;
         })
@@ -66,14 +66,14 @@ getOperator()
 
 equals.addEventListener('click', () => {
     num2 = getDisplay()
-    console.log(num2)
-    console.log(operate(op, num1, num2))
     let result = operate(op, num1, num2)
     if (result != - 1) {
         setDisplay(result)
         num1 = result
     }
-    else setDisplay("ERROR")
+    else {
+        setDisplay("ERROR")
+    }
 })
 
 acBtn.addEventListener('click', () => {
