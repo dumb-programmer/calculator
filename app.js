@@ -38,19 +38,47 @@ let op = null;
 let equalsop = document.getElementById("equals")
 let acBtn = document.getElementById("clear")
 let delBtn = document.getElementById("delete")
+let body = document.querySelector("body")
+
+body.addEventListener('keypress', (e) => {
+    let allowed = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9','.']
+    for (let i = 0; i < allowed.length; ++i) {
+        if (e.key == allowed[i]) {
+            const btn = document.getElementById(`${allowed[i]}`)
+            btn.click()
+        }
+    }
+})
 
 function populateDisplay() {
     let btns = document.querySelectorAll(".num-btn")
     let display = document.querySelector(".input")
     btns.forEach((btn) => {
         btn.addEventListener('click', () => {
-            if(btn.textContent == "." && display.textContent.includes(".")){
+            if (btn.textContent == "." && display.textContent.includes(".")) {
                 return
             }
             display.textContent += btn.textContent
         })
     })
 }
+
+body.addEventListener('keypress', (e) => {
+    let allowed = ['+', '-', '/', '*']
+    console.log(e.key)
+    for (let i = 0; i < allowed.length; ++i) {
+        if (e.key == allowed[i]) {
+            const opBtn = document.getElementById(`${allowed[i]}`)
+            opBtn.click()
+            break
+        }
+        else if (e.key == "Enter") {
+            const opBtn = document.getElementById("equals")
+            opBtn.click()
+            break
+        }
+    }
+})
 
 function getOperator() {
     let operators = document.querySelectorAll(".operator-btn")
@@ -87,7 +115,7 @@ acBtn.addEventListener('click', () => {
 
 delBtn.addEventListener('click', () => {
     let display = document.querySelector(".input")
-    display.textContent = display.textContent.slice(0,-1)
+    display.textContent = display.textContent.slice(0, -1)
 })
 
 function setDisplay(value) {
