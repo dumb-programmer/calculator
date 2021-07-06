@@ -43,6 +43,9 @@ function populateDisplay() {
     let display = document.querySelector(".input")
     btns.forEach((btn) => {
         btn.addEventListener('click', () => {
+            if(btn.textContent == "." && display.textContent.includes(".")){
+                return
+            }
             display.textContent += btn.textContent
             return display.textContent
         })
