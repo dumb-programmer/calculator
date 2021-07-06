@@ -26,18 +26,19 @@ button {
     height: 40px;
     margin-bottom: 5px;
     font-size: 15px;
+    background-color: #EDEDED;
 }
 
 .body{
   position: absolute;
-  background-color: grey;
+  background-color: #171717;
   padding: 20px;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   border-radius: 5%;
 }
 
 #clear {
-    background-color: red;
+    background-color: #DA0037;
     color: white;
     border-radius: 20%;
     border: none;
@@ -46,13 +47,13 @@ button {
 }
 
 #equals {
-    background-color: #4285f4;
+    background-color: #444444;
     border:none;
     border-radius: 15%;
 }
 
 #delete{
-    background-color:cyan;
+    background-color:#FF7600;
     border: none;
     border-radius: 20%;
     position: relative;
