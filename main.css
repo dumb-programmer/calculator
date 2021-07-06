@@ -40,13 +40,21 @@ button {
     background-color: red;
     color: white;
     border-radius: 20%;
-    border: 2px solid grey;
+    border: none;
     position: relative;
     left: 225px;
 }
 
 #equals {
     background-color: #4285f4;
-    border: 2px solid grey;
+    border:none;
     border-radius: 15%;
+}
+
+#delete{
+    background-color:cyan;
+    border: none;
+    border-radius: 20%;
+    position: relative;
+    left: 70px;
 }

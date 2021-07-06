@@ -37,6 +37,7 @@ let num2 = null;
 let op = null;
 let equalsop = document.getElementById("equals")
 let acBtn = document.getElementById("clear")
+let delBtn = document.getElementById("delete")
 
 function populateDisplay() {
     let btns = document.querySelectorAll(".num-btn")
@@ -47,7 +48,6 @@ function populateDisplay() {
                 return
             }
             display.textContent += btn.textContent
-            return display.textContent
         })
     })
 }
@@ -58,8 +58,7 @@ function getOperator() {
         operator.addEventListener('click', () => {
             num1 = getDisplay()
             clear()
-            op = operator.textContent;
-            return operator.textContent;
+            op = operator.textContent
         })
     })
 }
@@ -84,6 +83,11 @@ acBtn.addEventListener('click', () => {
     num1 = null
     num2 = null
     op = null
+})
+
+delBtn.addEventListener('click', () => {
+    let display = document.querySelector(".input")
+    display.textContent = display.textContent.slice(0,-1)
 })
 
 function setDisplay(value) {
